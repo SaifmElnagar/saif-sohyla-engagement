@@ -1,15 +1,15 @@
 :root {
-  --cream: #fbf3ea;
-  --soft-cream: #fffaf3;
-  --blush: #f4dfe1;
-  --pink: #eeb8c1;
-  --brown: #8d4b35;
-  --brown-2: #a76542;
-  --champagne: #e9d5a9;
-  --beige: #eadcc9;
-  --ink: #5d3c31;
-  --border: #d4b6a4;
-  --shadow: 0 22px 45px rgba(141, 75, 53, 0.13);
+  --cream: #f8f0e6;
+  --soft-cream: #fffaf4;
+  --blush: #f1e0de;
+  --pink: #dfb6b4;
+  --brown: #6e4b2d;
+  --brown-2: #9a6a38;
+  --champagne: #d8b677;
+  --beige: #ead8c1;
+  --ink: #4c382b;
+  --border: #d8c3a3;
+  --shadow: 0 22px 45px rgba(110, 75, 45, 0.14);
 }
 
 * { box-sizing: border-box; }
@@ -20,9 +20,9 @@ body {
   margin: 0;
   color: var(--ink);
   background:
-    radial-gradient(circle at 20% 10%, rgba(238, 184, 193, 0.35), transparent 28rem),
-    radial-gradient(circle at 90% 45%, rgba(233, 213, 169, 0.35), transparent 24rem),
-    linear-gradient(180deg, var(--cream), #f7e7e4 55%, var(--blush));
+    radial-gradient(circle at 18% 10%, rgba(223, 182, 180, 0.32), transparent 28rem),
+    radial-gradient(circle at 90% 42%, rgba(216, 182, 119, 0.30), transparent 24rem),
+    linear-gradient(180deg, var(--cream), #f5e8dd 55%, var(--blush));
   font-family: "Cormorant Garamond", Georgia, serif;
   overflow-x: hidden;
 }
@@ -59,7 +59,7 @@ a { color: inherit; text-decoration: none; }
   padding-top: 72px;
 }
 
-.script { font-family: "Dancing Script", cursive; }
+.script { font-family: "Great Vibes", cursive; }
 
 .eyebrow {
   margin: 58px 0 0;
@@ -81,7 +81,7 @@ a { color: inherit; text-decoration: none; }
 .arabic-line {
   margin: 18px 0 0;
   color: var(--brown);
-  font-family: "Amiri", serif;
+  font-family: "Cormorant Garamond", serif;
   font-size: clamp(1.25rem, 4vw, 2rem);
 }
 
@@ -94,7 +94,7 @@ a { color: inherit; text-decoration: none; }
   min-height: 54px;
   padding: 13px 28px;
   border-radius: 999px;
-  font-family: "Dancing Script", cursive;
+  font-family: "Great Vibes", cursive;
   font-size: 1.35rem;
   transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
 }
@@ -225,7 +225,7 @@ a { color: inherit; text-decoration: none; }
 .person-card.right::after { border-radius: 0 0 50% 50%; }
 .arabic-small {
   margin-top: 86px;
-  font-family: "Amiri", serif;
+  font-family: "Cormorant Garamond", serif;
   color: var(--ink);
   font-size: 1.25rem;
 }
@@ -542,3 +542,94 @@ a { color: inherit; text-decoration: none; }
   .dots { letter-spacing: 0.35em; }
   .story-grid img { height: 350px; }
 }
+
+
+.hero::after,
+.message-section::before,
+.location::before,
+.rsvp::before,
+.closing::before {
+  content: "";
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  right: 14px;
+  top: 24px;
+  opacity: 0.18;
+  background: radial-gradient(circle at 40% 40%, var(--champagne) 0 22%, transparent 23%), radial-gradient(circle at 62% 40%, var(--champagne) 0 22%, transparent 23%);
+}
+
+.big-title,
+.eyebrow {
+  letter-spacing: 0.04em;
+}
+
+.hero-names,
+.full-names,
+.venue-name,
+.with-love,
+.music-quote,
+.person-name,
+.date-full,
+.subtitle {
+  color: var(--brown-2);
+}
+
+.open-button,
+.brown-button {
+  background: linear-gradient(135deg, var(--brown) 0%, var(--brown-2) 100%);
+  box-shadow: 0 15px 30px rgba(110,75,45,0.22);
+}
+
+.outline-button {
+  border: 1.5px solid var(--brown-2);
+  background: rgba(255,250,244,0.85);
+  color: var(--brown);
+}
+
+.card,
+.count-box,
+.photo-frame,
+.music-card,
+.venue-card {
+  backdrop-filter: blur(3px);
+}
+
+.venue-photo-wrap {
+  position: relative;
+  min-height: 360px;
+}
+
+.venue-photo {
+  width: 100%;
+  height: 100%;
+  min-height: 360px;
+  object-fit: cover;
+  display: block;
+}
+
+.venue-overlay {
+  background: linear-gradient(to top, rgba(35, 24, 16, 0.72), rgba(35,24,16,0.2) 58%, rgba(35,24,16,0));
+}
+
+.form-button {
+  min-width: 260px;
+}
+
+.single-rsvp {
+  justify-content: center;
+}
+
+.music-card .couple-illustration {
+  color: var(--champagne);
+  text-shadow: 0 0 18px rgba(216, 182, 119, 0.28);
+}
+
+@media (max-width: 640px) {
+  .venue-photo,
+  .venue-photo-wrap {
+    min-height: 280px;
+  }
+}
+
+.arabic-line, .arabic-small, .couple-ar, .story-ar { display:none !important; }

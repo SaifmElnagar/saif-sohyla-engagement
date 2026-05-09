@@ -37,3 +37,6 @@ Open `index.html` in your browser.
 - Most browsers block automatic music playback, so visitors can start the background music from the music button or the audio player.
 - To change any text, edit `index.html`.
 - To change colors, edit the variables at the top of `style.css`.
+
+
+Updated version: English-only copy, venue photo, and Google Form RSVP.
